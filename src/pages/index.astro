@@ -8,19 +8,15 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Shivank Mishra</title>
   </head>
-  <body class="bg-black text-white font-sans scroll-smooth snap-y snap-mandatory h-screen overflow-y-scroll">
+  <body class="bg-black text-white font-sans">
     <canvas id="stars" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
 
-    <main class="relative z-10">
+    <main class="relative z-10 snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
       <!-- Hero Section -->
       <section class="snap-start h-screen flex flex-col items-center justify-center px-4 text-center">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">Shivank Mishra</h1>
         <p class="text-lg md:text-xl text-gray-300 max-w-xl">Developer. Builder. Explorer.</p>
         <a href="#about" class="mt-6 inline-block text-sm text-blue-400 hover:underline">↓ Scroll Down</a>
-
-        <div class="mt-8 flex justify-center">
-          <div class="animate-spin-slow w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg"></div>
-        </div>
       </section>
 
       <!-- About Section -->
@@ -60,12 +56,21 @@ import "../styles/global.css";
     </main>
 
     <script>
-      const canvas = document.getElementById("stars");
-      const ctx = canvas.getContext("2d");
+      type Star = {
+        x: number;
+        y: number;
+        radius: number;
+        alpha: number;
+        delta: number;
+      };
 
-      let width, height, stars;
+      const canvas = document.getElementById("stars") as HTMLCanvasElement | null;
+      const ctx = canvas?.getContext("2d");
+
+      let width: number, height: number, stars: Star[];
 
       function resizeCanvas() {
+        if (!canvas) return;
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
         createStars();
@@ -73,18 +78,19 @@ import "../styles/global.css";
 
       function createStars() {
         stars = [];
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < 250; i++) { // Increased from 200 to 400
           stars.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 1.5,
-            alpha: Math.random(),
+            radius: 1 + Math.random() * 1.5, // Original size range
+            alpha: Math.random() * 0.6 + 0.2,
             delta: Math.random() * 0.02
           });
         }
       }
 
       function drawStars() {
+        if (!ctx) return;
         ctx.clearRect(0, 0, width, height);
         for (let star of stars) {
           star.alpha += star.delta;
