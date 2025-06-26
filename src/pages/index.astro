@@ -21,8 +21,8 @@ import "../styles/global.css";
 
       <!-- About Section -->
       <section id="about" class="snap-start h-screen flex flex-col justify-center px-6 max-w-3xl mx-auto">
-        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-        <p class="text-gray-300">
+        <h2 class="text-3xl font-semibold mb-4 text-center">About Me</h2>
+        <p class="text-gray-300 text-center">
           I'm a computer science student who enjoys building software and exploring cool ideas.
           This site is a small place to share my work and interests. I like systems, space, and making tech useful.
         </p>
@@ -30,44 +30,50 @@ import "../styles/global.css";
 
       <!-- Projects Section -->
       <section id="projects" class="snap-start h-screen flex flex-col justify-center px-6 max-w-3xl mx-auto">
-        <h2 class="text-3xl font-semibold mb-4">Projects</h2>
-        <ul class="space-y-6">
-          <li class="border border-gray-700 p-4 rounded-md">
-            <h3 class="text-xl font-medium">Project One</h3>
+        <h2 class="text-3xl font-semibold mb-4 text-center">Projects</h2>
+        <ul class="space-y-6 flex flex-col items-center">
+          <li class="border border-gray-700 p-4 rounded-md w-full max-w-md text-center">
+            <h3 class="text-xl font-medium mb-2">Project One</h3>
             <p class="text-gray-400">A short description of your first project.</p>
+            <!-- Example project button -->
+            <a href="#" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
           </li>
-          <li class="border border-gray-700 p-4 rounded-md">
-            <h3 class="text-xl font-medium">Project Two</h3>
+          <li class="border border-gray-700 p-4 rounded-md w-full max-w-md text-center">
+            <h3 class="text-xl font-medium mb-2">Project Two</h3>
             <p class="text-gray-400">A short description of your second project.</p>
+            <a href="#" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
           </li>
         </ul>
       </section>
 
       <!-- Contact Section -->
       <section id="contact" class="snap-start h-screen flex flex-col justify-center px-6 max-w-3xl mx-auto">
-        <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-        <p class="text-gray-300 mb-4">Feel free to reach out on any platform:</p>
-        <ul class="space-y-2">
-          <li><a href="mailto:your@email.com" class="text-blue-400 hover:underline">Email</a></li>
-          <li><a href="https://github.com/yourusername" class="text-blue-400 hover:underline">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/yourusername" class="text-blue-400 hover:underline">LinkedIn</a></li>
-        </ul>
+        <h2 class="text-3xl font-semibold mb-4 text-center">Contact</h2>
+        <p class="text-gray-300 mb-4 text-center">Feel free to reach out on any platform:</p>
+        <div class="flex space-x-4 justify-center">
+          <a href="mailto:your@email.com" class="flex items-center px-4 py-2 bg-gray-800 rounded-lg hover:bg-red-600 transition-colors shadow text-white">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 12l-4-4-4 4m8 0v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6"/></svg>
+            Email
+          </a>
+          <a href="https://github.com/shivmishra76" target="_blank" rel="noopener" class="flex items-center px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-900 transition-colors shadow text-white">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="flex items-center px-4 py-2 bg-gray-800 rounded-lg hover:bg-blue-700 transition-colors shadow text-white">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.003 3.604 4.605v5.591z"/></svg>
+            LinkedIn
+          </a>
+        </div>
       </section>
     </main>
 
     <script>
-      type Star = {
-        x: number;
-        y: number;
-        radius: number;
-        alpha: number;
-        delta: number;
-      };
-
-      const canvas = document.getElementById("stars") as HTMLCanvasElement | null;
+      // Star and ShootingStar objects (plain JS, no types)
+      const canvas = document.getElementById("stars");
       const ctx = canvas?.getContext("2d");
 
-      let width: number, height: number, stars: Star[];
+      let width, height, stars;
+      let shootingStars = [];
 
       function resizeCanvas() {
         if (!canvas) return;
@@ -78,15 +84,39 @@ import "../styles/global.css";
 
       function createStars() {
         stars = [];
-        for (let i = 0; i < 250; i++) { // Increased from 200 to 400
+        for (let i = 0; i < 250; i++) {
           stars.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: 1 + Math.random() * 1.5, // Original size range
+            radius: 1 + Math.random() * 1.5,
             alpha: Math.random() * 0.6 + 0.2,
             delta: Math.random() * 0.02
           });
         }
+      }
+
+      function createShootingStar() {
+        // Start from the top or left edge, not the middle
+        const edge = Math.random() < 0.5 ? 'top' : 'left';
+        let x, y, angle;
+        if (edge === 'top') {
+          x = Math.random() * width;
+          y = 0;
+          angle = (Math.PI / 2) + (Math.random() - 0.5) * 1.2; // Downward, random spread
+        } else {
+          x = 0;
+          y = Math.random() * (height * 0.7); // Top 70% of screen
+          angle = (Math.PI / 4) + (Math.random() - 0.5) * 1.2; // Diagonal, random spread
+        }
+        shootingStars.push({
+          x,
+          y,
+          length: 60 + Math.random() * 40,
+          speed: 5 + Math.random() * 2,
+          angle,
+          alpha: 1,
+          active: true
+        });
       }
 
       function drawStars() {
@@ -103,14 +133,59 @@ import "../styles/global.css";
         }
       }
 
+      function drawShootingStars() {
+        if (!ctx) return;
+        for (let s of shootingStars) {
+          if (!s.active) continue;
+          ctx.save();
+          ctx.globalAlpha = s.alpha;
+          ctx.strokeStyle = "white";
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(s.x, s.y);
+          ctx.lineTo(
+            s.x - Math.cos(s.angle) * s.length,
+            s.y - Math.sin(s.angle) * s.length
+          );
+          ctx.shadowColor = "white";
+          ctx.shadowBlur = 10;
+          ctx.stroke();
+          ctx.restore();
+        }
+      }
+
+      function updateShootingStars() {
+        for (let s of shootingStars) {
+          if (!s.active) continue;
+          s.x += Math.cos(s.angle) * s.speed;
+          s.y += Math.sin(s.angle) * s.speed;
+          s.alpha -= 0.012;
+          if (
+            s.x > width + s.length ||
+            s.y > height + s.length ||
+            s.alpha <= 0
+          ) {
+            s.active = false;
+          }
+        }
+        shootingStars = shootingStars.filter((s) => s.active);
+      }
+
       function animate() {
         drawStars();
+        drawShootingStars();
+        updateShootingStars();
         requestAnimationFrame(animate);
       }
 
       resizeCanvas();
       animate();
       window.addEventListener("resize", resizeCanvas);
+
+      // Occasionally spawn a shooting star
+      setInterval(() => {
+        if (Math.random() < 0.18) createShootingStar(); // Less frequent
+      }, 1800); // Less frequent interval
     </script>
   </body>
 </html>
