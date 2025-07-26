@@ -40,25 +40,30 @@ import "../styles/global.css";
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="snap-start min-h-screen py-12 flex flex-col justify-center px-6 max-w-3xl mx-auto">
-        <h2 class="text-3xl font-semibold mb-4 text-center">Projects</h2>
-        <ul class="space-y-6 flex flex-col items-center">
-          <li class="border border-gray-700 p-4 rounded-md w-full max-w-md text-center">
-            <h3 class="text-xl font-medium mb-2">Personal Portfolio</h3>
-            <p class="text-gray-400">The website you're on right now! Built with Astro, Tailwind, and TypeScript.</p>
-            <a href="https://github.com/shivmishra76/portfolio-website" target="_blank" rel="noopener" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
-          </li>
-          <li class="border border-gray-700 p-4 rounded-md w-full max-w-md text-center">
-            <h3 class="text-xl font-medium mb-2">Satellite Tracker CLI</h3>
-            <p class="text-gray-400">A command-line tool to track satellites in real-time. It fetches TLE data, calculates orbital positions, and determines visibility from any ground station on Earth.</p>
-            <a href="https://github.com/shivmishra76/sat-tracker-cli" target="_blank" rel="noopener" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
-          </li>
-          <li class="border border-gray-700 p-4 rounded-md w-full max-w-md text-center">
-            <h3 class="text-xl font-medium mb-2">AI Space Assistant</h3>
-            <p class="text-gray-400">A natural language assistant for answering space and astronomy questions—anything from satellite tracking to physics concepts, astronomy facts, and general space exploration. Integrates LLMs with real-time data from sources like NASA and ESA. Modular CLI and web interfaces planned.</p>
-            <a href="https://github.com/shivmishra76/ai-space-assistant" target="_blank" rel="noopener" class="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
-          </li>
-        </ul>
+      <section id="projects" class="snap-start min-h-screen py-12 flex flex-col justify-center px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="border border-gray-700 p-6 rounded-md text-center hover:border-gray-600 transition-colors">
+            <h3 class="text-xl font-medium mb-3">Personal Portfolio</h3>
+            <p class="text-gray-400 mb-4">The website you're on right now! Built with Astro, Tailwind, and TypeScript.</p>
+            <a href="https://github.com/shivmishra76/portfolio-website" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
+          </div>
+          <div class="border border-gray-700 p-6 rounded-md text-center hover:border-gray-600 transition-colors">
+            <h3 class="text-xl font-medium mb-3">Satellite Tracker CLI</h3>
+            <p class="text-gray-400 mb-4">A command-line tool to track satellites in real-time. It fetches TLE data, calculates orbital positions, and determines visibility from any ground station on Earth.</p>
+            <a href="https://github.com/shivmishra76/sat-tracker-cli" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
+          </div>
+          <div class="border border-gray-700 p-6 rounded-md text-center hover:border-gray-600 transition-colors">
+            <h3 class="text-xl font-medium mb-3">AI Space Assistant</h3>
+            <p class="text-gray-400 mb-4">A natural language assistant for answering space and astronomy questions—anything from satellite tracking to physics concepts, astronomy facts, and general space exploration. Integrates LLMs with real-time data from sources like NASA and ESA. Modular CLI and web interfaces planned.</p>
+            <a href="https://github.com/shivmishra76/ai-space-assistant" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
+          </div>
+          <div class="border border-gray-700 p-6 rounded-md text-center hover:border-gray-600 transition-colors">
+            <h3 class="text-xl font-medium mb-3">Space Weather Impact</h3>
+            <p class="text-gray-400 mb-4">A C++ application that fetches real-time space weather data from NOAA APIs and models its impact on satellites. Features atmospheric drag calculations, communication degradation analysis, and solar flare detection with CLI tools and Docker support.</p>
+            <a href="https://github.com/shivmishra76/space-weather-impact" target="_blank" rel="noopener" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">View Project</a>
+          </div>
+        </div>
       </section>
 
       <!-- Contact Section -->
