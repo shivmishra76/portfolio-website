@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from '@vercel/analytics/astro';
 ---
 
 <html lang="en">
@@ -15,7 +16,6 @@ import "../styles/global.css";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body class="bg-black text-white font-sans">
     <canvas id="stars" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
@@ -24,7 +24,7 @@ import "../styles/global.css";
       <!-- Hero Section -->
       <section class="snap-start h-screen flex flex-col items-center justify-center px-4 text-center">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">Shivank Mishra</h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-xl">Developer. Builder. Explorer.</p>
+        <!-- <p class="text-lg md:text-xl text-gray-300 max-w-xl">Developer. Builder. Explorer.</p>  -->
         <a href="#about" class="mt-6 inline-block text-sm text-blue-400 hover:underline">↓ Scroll Down</a>
       </section>
 
@@ -36,7 +36,7 @@ import "../styles/global.css";
           <br/><br/>
           I'm a part of Illinois Robotics in Space (IRIS), where I work on embedded systems for the robot, mostly working with the motor drivers. I also volunteer as a Campus Ambassador for the Gift of Life Marrow Registry, raising awareness and recruiting donors.
           <br/><br/>
-          In my free time, I enjoy playing strategy board games like Catan and Dune, reading science fiction (currently reading <em>Project Hail Mary</em>), and gardening 😊.
+          In my free time, I enjoy playing strategy board games like Catan and Dune, reading science fiction (currently reading <em>Red Rising</em>), and gardening 😊.
         </p>
       </section>
 
@@ -84,10 +84,15 @@ import "../styles/global.css";
             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.003 3.604 4.605v5.591z"/></svg>
             LinkedIn
           </a>
+          <a href="https://www.goodreads.com/user/show/192051521-shivank-mishra" target="_blank" rel="noopener" class="flex items-center px-4 py-2 bg-gray-800 rounded-lg hover:bg-orange-600 transition-colors shadow text-white">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Goodreads
+          </a>
         </div>
       </section>
     </main>
 
     <script src="/stars.js" is:inline></script>
+    <Analytics />
   </body>
 </html>
